@@ -1,0 +1,131 @@
+\documentclass[a4paper,10pt,twocolumn]{scrartcl} %Koma-Skript-Äquivalent zu "article"
+
+\usepackage{german}            %macht deutsche überschriften
+\usepackage[utf8]{inputenc}  %man kann Sonderzeiche wie ü,ö usw direkt eingeben
+\usepackage{amsmath}           %macht
+\usepackage{amsfonts}          %       Mathe
+\usepackage{amssymb}           %              mächtiger
+\usepackage{graphicx}          %erlaubt Graphiken einzubinden (.eps für dvi und ps sowie .jpg für pdf)
+\usepackage[T1]{fontenc}       %Zeichenbelegung der verwendeten Schrift
+\usepackage{ae}                %macht schöneres ß
+\usepackage{typearea}	         %ermöglicht änderung des Seitenspiegels
+\usepackage[margin=10pt,font=small,labelfont=bf]{caption} %macht die Bildbeschriftungen richtig
+\usepackage{svg}
+\usepackage{shellesc}
+\renewcommand{\figurename}{Abb.}
+
+
+\typearea{16}                  %stellt Seitenspiegel ein
+\columnsep25pt								 %definiert Breite zwischen den zwei Spalten von \twocolumns
+
+\renewcommand{\pnumfont}{%     %ändert die Schriftart der Seitennummerierung
+\normalfont\rmfamily\slshape}  %ändert die Schriftart der Seitennummerierung 
+
+
+
+\begin{document}
+%\cfoot{\thepage /\pageref{LastPage}}     %macht die Seitennumerierung der Fom 2/5 (ausser auf der Titelseite)
+
+\twocolumn[{\csname @twocolumnfalse\endcsname                %erlaubt "Abstrakt" über beide Spalten
+\titlehead{   
+	\includegraphics[width=3cm]{thws.png}\\
+	\vspace*{1pt} \\                                %Kopfzeile
+	\begin{tabular*}{\textwidth}[]{@{\extracolsep{\fill}}lr}   %Kopfzeile
+	Betreuer: Prof. Dr. G. Krüger & \today\\                          %Kopfzeile      hier den Betreuer eintragen!!!
+	\end{tabular*}                                             %Kopfzeile
+	}
+\title{ATP \\Schnittkraftmessung }  %Titel der Versuchs
+\author{Tobias Benra, Simon Deuerling, \\ Niklas Dissinger und Martin Horlbeck}                     %Namen der Studenten
+\date{}                                                         %benötigt um automatisches Datum auszuschalten
+\maketitle                                                      %erzeugt Titelseite
+\vspace{-8ex}                                                   %verringert Abstand zur Überschrift
+\begin{abstract}                                                %Beginn des Abstracts
+Fusce urna magna,neque eget lacus. Maecenas justo urna, lacinia vitae, vesti. Cras erat. Aliquam pede. vulputate e dolor ac adipiscing amet bibendum nullam, massa lacus molestie ut libero nec, diam et, sodales eget, feugiat ullamcorper id tempore. Ac dolor ac adipiscing amet bibendum. Maecenas felis nunc, aliquam ac, consequat vitae, feugiat at, blandit vitae, euismod vel, nunc. Aenean ut erat ut nibh commodo suscipit. . Ac dolor ac adipiscing amet bibendum. Maecenas felis nunc, aliquam ac, consequat vitae, feugiat at, blandit vitae, euismod vel, nunc. Aenean ut erat ut nibh commodo suscipit.  
+\\ \\ 
+\\ 
+Versuchsdurchführung: 8.November 2023\\       %Datum ändern!
+Protokollabgabe: 15.November 2023                %Datum ändern!
+\\ 
+\\ 
+\end{abstract}
+}]
+
+\section{Einleitung}
+
+Koaxialkabel, oder auch kurz Koaxkabel genannt, werden zur Übertragung hochfrequenter Signale verwendet. Sie sind aus einem Innen- und einem Außenleiter aufgebaut, welche durch ein Dielektrikum getrennt und isoliert werden. Nach außen sind diese Kabel durch eine weitere isolierende Schicht geschützt. Durch die Abschirmung des Innenleiters durch den Außenleiter ergibt sich die geringe Störanfälligkeit für externe Elektromagnetische Felder. An ihnen lassen sich die Eigenschaften elektromagnetischer Wellen studieren.
+\paragraph{} Im folgenden Folgenden wird der Wellenwiderstand eines Koaxialkabels bestimmt und die Signalübertagung bei verschiedenen ?Endwiderständen? beobachtet. Es wurde die Dämpfung, Reflexion und Ausbreitungsgeschwindigkeit gemessen. Zusätzlich wurde die Lichtgeschwindigkeit in Luft bestimmt.
+
+
+
+
+\section{Signalübertragung auf Koaxialkabeln bei verschiedenartiger Anpassung}
+\subsection{Messung des Wellenwiderstandes eines Koaxialkabels}
+Das Signal des Funktionsgenerators wurde auf des Kabel gegeben und am Beginn durch ein Oszilloskop gemessen. Es werden Impulse von  mit einer Zeit von \textit{t=20ns} bei einer Frequenz von \textit{f=200kHz} gemessen. Am Ende Des Koaxialkabels wir ein Widerstand \textit{$R_v$} in Form eines 100 $\Omega$ Wendelpotentiometer geschalten. Für den Reflexionskoeffizienten gilt:
+
+\begin{align}                         
+\rho=\frac{R_v-Z}{R_v+Z}
+\end{align}
+
+Z beschreibt den Wellenwiderstand des Kabels. Es entsteht keine Reflexion Bei \textit{$R_v=Z$}. Es wurde die Einstellung des Wendelpotentiometers gewählt, bei dem die Reflexion minimal war. Mit dem Multimeter Voltcraft VC170 wurde \textit{$R_v = (39,0 \pm 1,4) \Omega$ } bestimmt. Es wurde auch eine Widerstandsdekade verwendet um \textit{$R_v$} einzustellen.
+
+
+
+
+\section{Experiment}
+
+
+\begin{table}[htbp]          %so funktionieren die Tabellen in LaTeX
+\centering
+\begin{tabular*}{\linewidth}{@{\extracolsep{\fill}}ccc}
+\hline
+\hline
+\rule[-7pt]{0pt}{23pt}  Subshell  &     $j$ values 						  		&     Area ratio \\
+\hline
+\rule[-6pt]{0pt}{21pt}   $s$ 			&     $\frac{1}{2}$ 							&       --- \\
+
+\rule[-6pt]{0pt}{21pt}   $p$ 			&     $\frac{1}{2},\frac{3}{2}$ 	&     $1:2$ \\
+
+\rule[-6pt]{0pt}{21pt}   $d$ 			&     $\frac{3}{2},\frac{5}{2}$ 	&     $2:3$ \\
+
+\rule[-7pt]{0pt}{22pt}   $f$ 			&     $\frac{5}{2},\frac{7}{2}$ 	&     $3:4$ \\
+\hline
+\hline
+\end{tabular*}  
+\caption[]{Spin-orbit splitting parameters.}  %siehe Graphik: Beschriftung
+\label{spinsplit}                             %siehe Graphik: zum Zitieren
+\end{table}
+Sed fermentum vestibulum wisi. Nunc dictum ligula at ipsum. Integer vulputate elit sed enim. Sed pede dolor, convallis quis, rhoncus ut, aliquet ut, urna. In ac libero eu diam fringilla gravida. Vestibulum ante ultrices posuere cubilia Curae; Fusce urna magna,neque eget lacus. Maecenas justo urna, lacinia vitae, vesti. Cras erat. Aliquam pede. vulputate e dolor ac adipiscing amet bibendum nullam, massa lacus molestie ut libero nec, diam et, sodales eget, feugiat ullamcorper id tempore. Ac dolor ac adipiscing amet bibendum nullam, tristique vitae, sodales eget, hendrerit sed, erat massa lacus molestie ut libero nec, diam et, pharetra sodales eget.
+
+Maecenas felis nunc, aliquam ac, consequat vitae, feugiat at, blandit vitae, euismod vel, nunc. Aenean ut erat ut nibh commodo suscipit. Maecenas non quam. Cras erat. Aliquam pede. vulputate eu, estmorbi tristique senectus et netus et male. Aliquam pede. Proin neque est, sagittis at, semper vitae, tincidunt quis, enim. Cras adipiscing neque eget lacus. Maecenas felis nunc,pharetra ut, aliquet non, rutrum quis, urna. Nulla vitae sapien. Fusce eros lectus, at lacus ac mi vehicula bibendum.
+
+Vestibulum imperdiet nonummy sem. Vivamus sit amet erat nec turpis tempus consequat. Praesent malesuada. Donec vitae dolor. Donec at lacus ac mi vehicula bibendum. Donec feugiat tempor libero. Nam uut, massa.
+
+Maecenas felis nunc, aliquam ac, consequat vitae, feugiat at, blandit vitae, euismod vel, nunc. Aenean ut erat ut nibh commodo suscipit. Maecenas non quam. Cras erat. Aliquam pede. vulputate eu, estmorbi tristique senectus et netus et male. Aliquam pede. Proin neque est, sagittis at, semper vitae, tincidunt quis, enim. Cras adipiscing neque eget lacus. Maecenas felis nunc,pharetra ut, aliquet non, rutrum quis, urna. Nulla vitae sapien. Fusce eros lectus, at lacus ac mi vehicula bibendum.
+
+Vestibulum imperdiet nonummy sem. Vivamus sit amet erat nec turpis tempus consequat. Praesent malesuada. Donec vitae dolor. Donec at lacus ac mi vehicula bibendum. Donec feugiat tempor libero. Nam uut, massa.
+
+Maecenas felis nunc, aliquam ac, consequat vitae, feugiat at, blandit vitae, euismod vel, nunc. Aenean ut erat ut nibh commodo suscipit. Maecenas non quam. Cras erat. Aliquam pede. vulputate eu, estmorbi tristique senectus et netus et male. Aliquam pede. Proin neque est, sagittis at, semper vitae, tincidunt quis, enim. Cras adipiscing neque eget lacus. Maecenas felis nunc,pharetra ut, aliquet non, rutrum quis, urna. Nulla vitae sapien. Fusce eros lectus, at lacus ac mi vehicula bibendum.
+
+Vestibulum imperdiet nonummy sem. Vivamus sit amet erat nec turpis tempus consequat. Praesent malesuada. Donec vitae dolor. Donec at lacus ac mi vehicula bibendum. Donec feugiat tempor libero. Nam uut, massa.
+
+\section{Zusammenfassung}
+Adiam condimentum purus, in consectetuer Proin in sapien. Fusce urna magna,neque eget lacus. Maecenas felis nunc, aliquam ac,9 consequat vitae, feugiat at, blandit vitae, euismod vel, nunc. Aenean ut erat ut nibh commodo suscipit. Maecenas non quam. Cras erat. Aliquam pede. vulputate eu, estmorbi tristique senectus et netus et male. Aliquam pede. Proin neque est, sagittis at, semper vitae, tincidunt quis, enim. Cras adipiscing neque eget lacus. Maecenas felis nunc,pharetra ut, aliquet non, rutrum quis, urna. Nulla vitae sapien. Fusce eros lectus, at lacus ac mi vehicula bibendum\cite{j}.
+
+Vestibulum imperdiet nonummy sem. Vivamus sit amet erat nec turpis tempus consequat. Praesent malesuada. Donec vitae dolor. Donec at lacus ac mi vehicula bibendum. Donec feugiat tempor libero. Nam uut, massa.
+
+\begin{thebibliography}{}    %so wird das Literaturverzeicnis erstellt
+\bibitem{a} Adiam condimentum purus, in consectetuer Proin in sapien. 
+\bibitem{b} Fusce urna magna,neque eget lacus. 
+\bibitem{c} Maecenas felis nunc, aliquam ac, consequat vitae, feugiat at, blandit vitae, euismod vel, nunc. 
+\bibitem{d} Aenean ut erat ut nibh commodo suscipit. Maecenas non quam. 
+\bibitem{e} Cras erat. Aliquam pede. vulputate eu, estmorbi tristique senectus et netus et male. 
+\bibitem{f} Aliquam pede. Proin neque est, sagittis at, semper vitae, tincidunt quis, enim. 
+\bibitem{g} Cras adipiscing neque eget lacus. 
+\bibitem{h} Maecenas felis nunc,pharetra ut, aliquet non, rutrum quis, urna. Nulla vitae sapien. 
+\bibitem{i} Fusce eros lectus, at lacus ac mi vehicula bibendum.
+\bibitem{j} Vestibulum imperdiet nonummy sem. 
+\end{thebibliography}
+
+
+
+\end{document}

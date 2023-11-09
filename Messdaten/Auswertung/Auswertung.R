@@ -31,3 +31,7 @@ arrows(x0 = Messungen$Vorschub, y0 = Messungen$Passiv, x1 = Messungen$Vorschub, 
 summary(lm(Messungen$`Vorschub`~ Messungen$Schnitt))
 summary(lm(Messungen$`Vorschub`~ Messungen$Vorschubk))
 summary(lm(Messungen$Vorschub~ Messungen$Passiv))
+
+
+kc.model <- lm(log(Messungen$Vorschub) ~ log(Messungen$Vorschub))
+summary(kc.model)
